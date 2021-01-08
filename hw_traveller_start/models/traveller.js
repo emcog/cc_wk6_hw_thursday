@@ -3,13 +3,17 @@ const Traveller = function(journeys) {
 };
 
 Traveller.prototype.getJourneyStartLocations = function() {
-// find index
-// ----- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex
+  const start = this.journeys.map((journey) => {
+    return journey.startLocation;;
+  });
+  return start;
 };
 
 Traveller.prototype.getJourneyEndLocations = function () {
-  // ----- find index
-  //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+  const end = this.journeys.map((journey) => {
+    return journey.endLocation;
+  })
+  return end;
 };
 
 Traveller.prototype.getJourneysByTransport = function (transport) {
