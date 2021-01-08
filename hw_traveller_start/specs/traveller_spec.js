@@ -58,7 +58,7 @@ describe('Traveller', function() {
     assert.deepStrictEqual(traveller.getJourneysByTransport('train'), expected);
   });
 
-  xit('should be able to get journeys over a certain distance', function() {
+  it('should be able to get journeys over a certain distance', function() {
     const expected = [
       journey3,
       journey4
@@ -66,7 +66,7 @@ describe('Traveller', function() {
     assert.deepStrictEqual(traveller.getJourneysByMinDistance(1000), expected)
   });
 
-  xit('should be able to calculate total distance travelled', function() {
+  it('should be able to calculate total distance travelled', function() {
     assert.deepStrictEqual(traveller.calculateTotalDistanceTravelled(), 11710);
   });
 

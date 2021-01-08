@@ -24,15 +24,15 @@ Traveller.prototype.getJourneysByTransport = function (transport) {
 };
 
 Traveller.prototype.getJourneysByMinDistance = function (minDistance) {
-  const filterByMinDistance = this.journeys.filter((journey) => {
-    return minDistance > journey.distance;
+  return this.journeys.filter((journey) => {
+    return journey.distance > minDistance
   });
-  return filterByMinDistance;
-    
 };
 
 Traveller.prototype.calculateTotalDistanceTravelled = function () {
-  // sum the contents of an array
+  return this.journeys.reduce((total, journey) => {
+    return total + journey.distance;
+  }, 0);
 };
 
 Traveller.prototype.getUniqueModesOfTransport = function () {
